@@ -25,7 +25,9 @@ const Review = () => {
 
         const cartProducts = productKeys.map(key => {
             const product = fakeData.find(pd => pd.key === key);
+            console.log(savedCart[key])
             product.quantity = savedCart[key];
+           console.log(product.quantity);
             return product
         })
         setCart(cartProducts);
